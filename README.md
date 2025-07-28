@@ -92,8 +92,3 @@ Tested with:
 
 * Instant response from distributed storage (YugabyteDB)
 * Files stored directly in DB, reducing file I/O overhead
-
-## Author
-
-**Sushrutha Shanbhogue**
-[GitHub](https://github.com/Sushruthashan) 
