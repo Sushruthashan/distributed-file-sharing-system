@@ -7,7 +7,7 @@ A secure and scalable distributed file sharing system built using **C++**, **Poc
 - Secure file uploads and downloads
 - Shareable links for file access using unique tokens
 - Files stored in a distributed database (YugabyteDB)
-- ⚙Built with CMake for cross-platform compatibility
+- Built with CMake for cross-platform compatibility
 - HTTP-based API using Poco C++ Server framework
 
 ## Tech Stack
