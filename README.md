@@ -21,7 +21,7 @@ A secure and scalable distributed file sharing system built using **C++**, **Poc
 | Build System       | CMake                  |
 
 ## Project Structure
-<pre> ```
+<pre> 
 distributed-file-sharing/
 ├── CMakeLists.txt
 ├── main.cpp
@@ -37,7 +37,7 @@ distributed-file-sharing/
 │   └── TokenGenerator.cpp
 ├── .gitignore
 └── README.md
-``` </pre>
+</pre>
 ## Getting Started
 
 ### Prerequisites
