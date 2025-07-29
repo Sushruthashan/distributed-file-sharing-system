@@ -1,5 +1,4 @@
-# C++ Task 2
-# Distributed File Sharing System
+# C++ Task 2: Implementing a Distributed File Sharing System with Poco C++ Libraries
 
 A secure and scalable distributed file sharing system built using **C++**, **Poco C++ Libraries**, and **YugabyteDB**. The system allows users to upload, download, and share files via secure shareable links.
 
