@@ -1,4 +1,4 @@
-// C++ TASK 2
+// C++ TASK 2: Implementing a Distributed File Sharing System with Poco C++ Libraries
 
 #include <iostream>
 #include <iomanip>
