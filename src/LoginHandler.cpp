@@ -17,7 +17,6 @@ using namespace Poco::Net;
 using namespace Poco::JSON;
 using namespace Poco::Dynamic;
 
-// Declare verifyPassword() if not in header
 extern bool verifyPassword(const std::string& input, const std::string& storedHash);
 
 void LoginHandler::handleRequest(HTTPServerRequest& request, HTTPServerResponse& response) {
