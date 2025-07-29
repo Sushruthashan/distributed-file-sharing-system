@@ -62,7 +62,6 @@ txn.exec(R"(
 
 txn.exec("ALTER TABLE files ADD COLUMN IF NOT EXISTS share_token TEXT UNIQUE");
 
-
        std::string shareToken = Poco::UUIDGenerator().createRandom().toString();
 
        txn.exec_params(
@@ -72,15 +71,12 @@ txn.exec("ALTER TABLE files ADD COLUMN IF NOT EXISTS share_token TEXT UNIQUE");
     shareToken
 );
 
-
-
 txn.exec("ALTER TABLE files ADD COLUMN IF NOT EXISTS data TEXT");
 
         txn.exec_params(
     "INSERT INTO files (filename, data) VALUES ($1, $2)",
     partHandler.fileName, partHandler.fileContent
 );
-
 
         txn.commit();
 
