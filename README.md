@@ -80,11 +80,18 @@ curl -X POST -F "file=@yourfile.txt" http://localhost:8080/upload
 ### Download a File
 curl -OJL http://localhost:9090/download/<share_token>
 
+
 ## Key Design Decisions
 1. I was facing difficulties starting the YSQL shell, hence decided to create manipulate the database tables within the C++ files itself
 2. Used PostgreSQL along with Poco, where Poco handling the web server and HTTP request/response and PostgreSQL handling the storage of files, helping in writing modular and maintainable C++ codes.
    The combination also enabled fast-file sharing system with added security as Poco supports HTTP authentication easily and PostgreSQL offers authentication, encryption(TLS) and access control.
 
+
+## Challenges faced
+1. I was unfamiliar with Poco and PostgreSQL libraries along with Yugabyte DB, but eventually learnt them and implemented them for the project.
+2. Faced difficulties starting the YSQL shell, managed it through C++ manipulation of the database.
+
+   
 ## Testing
 
 Tested with:
