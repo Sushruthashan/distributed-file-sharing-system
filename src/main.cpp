@@ -1,3 +1,5 @@
+// C++ TASK 2
+
 #include <iostream>
 #include <iomanip>
 #include <sstream>
@@ -29,24 +31,6 @@ using namespace Poco::JSON;
 using namespace Poco::Dynamic;
 using namespace std;
 
-// Function to hash passwords using SHA256 (simple version)
-/*std::string hashPassword(const std::string &password) {
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    SHA256(reinterpret_cast<const unsigned char *>(password.c_str()), password.length(), hash);
-    
-    std::stringstream ss;
-    for (int i = 0; i < SHA256_DIGEST_LENGTH; ++i)
-        ss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
-
-    return ss.str();
-}
-
-// Verify input password against stored hash
-bool verifyPassword(const std::string &input, const std::string &storedHash) {
-    return hashPassword(input) == storedHash;
-}
-*/
-// Global connection to YugabyteDB
 pqxx::connection conn("host=localhost port=5433 dbname=yugabyte user=yugabyte password=yugabyte");
 
 // ------------------ HTTP Request Handler ------------------
@@ -62,7 +46,7 @@ public:
         std::string body = ss.str();
 
         try {
-            // Parse JSON
+            
             Poco::JSON::Parser parser;
             Poco::Dynamic::Var result = parser.parse(body);
             Poco::JSON::Object::Ptr obj = result.extract<Poco::JSON::Object::Ptr>();
@@ -112,7 +96,7 @@ public:
         } else if (uri == "/upload") {
             return new FileUploadHandler();
         } else {
-            return new NotFoundHandler();  // Optional fallback
+            return new NotFoundHandler();  
         }
     }
 };
