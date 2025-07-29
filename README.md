@@ -80,6 +80,11 @@ curl -X POST -F "file=@yourfile.txt" http://localhost:8080/upload
 ### Download a File
 curl -OJL http://localhost:9090/download/<share_token>
 
+## Key Design Decisions
+1. I was facing difficulties starting the YSQL shell, hence decided to create manipulate the database tables within the C++ files itself
+2. Used PostgreSQL along with Poco, where Poco handling the web server and HTTP request/response and PostgreSQL handling the storage of files, helping in writing modular and maintainable C++ codes.
+   The combination also enabled fast-file sharing system with added security as Poco supports HTTP authentication easily and PostgreSQL offers authentication, encryption(TLS) and access control.
+
 ## Testing
 
 Tested with:
