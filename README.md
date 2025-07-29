@@ -78,7 +78,7 @@ docker run -d --name yugabyte -p 5433:5433 -p 7000:7000 yugabytedb/yugabyte:late
 curl -X POST -F "file=@yourfile.txt" http://localhost:8080/upload
 
 ### Download a File
-curl -OJL http://localhost:8080/download/<share_token>
+curl -OJL http://localhost:9090/download/<share_token>
 
 ## Testing
 
