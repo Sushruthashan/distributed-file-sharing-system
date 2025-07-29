@@ -1,9 +1,6 @@
 #include "RegisterHandler.h"
 
-// Only implement the constructor and methods
-RegisterHandler::RegisterHandler() {
-    // constructor logic
-}
+RegisterHandler::RegisterHandler() {}
 
 void RegisterHandler::handleRequest(Poco::Net::HTTPServerRequest& request,
                                     Poco::Net::HTTPServerResponse& response) {
