@@ -108,11 +108,11 @@ protected:
         HTTPServer server(new RequestHandlerFactory, ServerSocket(9090), new HTTPServerParams);
         server.start();
 
-        std::cout << "✅ Server started at http://localhost:9090" << std::endl;
+        std::cout << "Server started at http://localhost:9090" << std::endl;
         waitForTerminationRequest();
 
         server.stop();
-        std::cout << "🛑 Server stopped." << std::endl;
+        std::cout << "Server stopped." << std::endl;
         return Application::EXIT_OK;
     }
 };
