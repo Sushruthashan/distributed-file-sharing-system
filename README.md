@@ -1,7 +1,7 @@
 # C++ Task 2
 # Distributed File Sharing System
 
-A secure and scalable distributed file sharing system built using **C++**, **Poco C++ Libraries**, and **YugabyteDB**. The system allows users to upload, download, and share files via secure shareable links. Designed for performance, portability, and extensibility.
+A secure and scalable distributed file sharing system built using **C++**, **Poco C++ Libraries**, and **YugabyteDB**. The system allows users to upload, download, and share files via secure shareable links.
 
 ## Features
 
@@ -84,10 +84,9 @@ curl -OJL http://localhost:8080/download/<share_token>
 
 Tested with:
 
-* Large files up to 100MB
+* Text files up to 100MB
 * Empty and duplicate file uploads
 * Invalid or expired tokens
-* Parallel upload/download requests
 
 ## Performance
 
